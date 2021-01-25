@@ -10,3 +10,17 @@ NOTE: Check out the Python docs and see whether you can come up with a solution,
       Feel free to discuss any questions you have with your mentor and on the forum!
 
 '''
+dict1 = {"item1": 5, "item2": 6, "item3": 1}
+
+sorted_values = sorted(dict1.values()) # Sort the values
+sorted_dict = {}
+
+for i in sorted_values:
+    for k in dict1.keys():
+        if dict1[k] == i:
+            sorted_dict[k] = dict1[k]
+            break
+
+print(sorted_dict)
+
+

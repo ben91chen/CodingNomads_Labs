@@ -6,3 +6,14 @@ user_input = "hello"
 result = {"h": 1, "e": 1, "l": 2, "o": 1}
 
 '''
+
+user_input = input("Type a sentence: ")
+
+result = {}
+
+for i in user_input:
+    if i in result:
+        result[i] += 1
+    else:
+        result[i] = 1
+print(result)

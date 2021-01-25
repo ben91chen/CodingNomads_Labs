@@ -7,3 +7,34 @@ Example input:  1,2,3,4,5,6,7,8,9,10
 Example output: 2,4,6,8,10,9,7,5,3,1
 
 '''
+
+
+list = []
+int_list = []
+even_list = []
+odd_list = []
+sorted_list = []
+counter = 1
+
+while counter < 11:
+    user_input = input(f"Number {counter}: ")
+    list.append(user_input)
+    counter += 1
+
+for str in list:
+    int_list.append(int(str))
+print(int_list)
+
+for num in int_list[1::2]:
+    sorted_list.append(num)
+for num in int_list[-2::-2]:
+    sorted_list.append(num)
+
+print(sorted_list)
+
+
+
+
+
+
+
