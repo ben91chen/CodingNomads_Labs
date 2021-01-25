@@ -7,3 +7,11 @@ The output of your calculation should therefore look like this:
 
 The sum is: 5050
 '''
+sum = 0
+user_input1 = int(input("Type a number: "))
+user_input2 = int(input("Type another number: "))
+
+for num in range(user_input1, user_input2 + 1):
+    sum += num
+
+print(sum)

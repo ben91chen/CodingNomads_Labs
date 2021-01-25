@@ -8,3 +8,19 @@ Use a loop to print the following table to the console:
  40 41 42 43 44 45 46 47 48 49
 
 '''
+
+
+for i in range(0,50):
+    if i == 9:
+        print(i)
+    elif i == 19:
+        print(i)
+    elif i == 29:
+        print(i)
+    elif i == 39:
+        print(i)
+    elif i == 49:
+        print(i)
+    else:
+        print(i, end = " ")
+
