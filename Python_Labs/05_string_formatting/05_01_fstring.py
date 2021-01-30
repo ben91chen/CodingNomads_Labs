@@ -18,3 +18,34 @@ famous_quotes = [
     {"full_name": "Nathan Myhrvold", "quote": "Software is a gas; it expands to fill its container."},
     {"full_name": "Alan Bennett", "quote": "Standards are always out of date.  That’s what makes them standards."}
 ]
+
+full_name = []
+surname = []
+first_name = []
+quotes = []
+# iterate through the list and get dictionaries
+for dict_ in famous_quotes:
+    full_name.append(dict_["full_name"])
+    quotes.append(dict_["quote"])
+
+# iterate through the dictionary so that we can break up the names into first and last name
+for name in full_name:
+    split_name = name.split(" ")
+    last_name = split_name[-1]
+    surname.append(last_name)
+    f_name = split_name[0]
+    first_name.append(f_name)
+
+print(surname, first_name)
+
+# think of zip like a column/row matrix
+for final_line in zip(quotes, surname, first_name):
+    print(f"{final_line[0]} - {final_line[1]}, {final_line[2]}")
+
+
+
+
+
+
+
+

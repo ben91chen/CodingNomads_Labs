@@ -25,3 +25,29 @@ office = [
     {"full_name": "Creed Bratton", "item": "mung beans"},
     {"full_name": "Darryl Philbin", "item": "forklift"},
 ]
+
+full_name = []
+first_name = []
+last_name = []
+office_supply = []
+
+
+
+# iterate over list and get dictionaries, then append them to list
+for dict_ in office:
+    full_name.append(dict_["full_name"])
+    office_supply.append(dict_["item"])
+
+# separate first name from last name
+for name in full_name:
+    split_name = name.split(" ")
+    first_name.append(split_name[0])
+    last_name.append(split_name[1])
+
+# put the f-string together
+
+for sentence in zip(first_name, last_name, office_supply):
+    length = (len(f"{sentence[1]}, {sentence[0]}"))
+    print(f'{sentence[1]}, {sentence[0]}{sentence[2].rjust(50 - length)}')
+
+# how do I get the last office_supply to ljust in the same position on the right hand side?
