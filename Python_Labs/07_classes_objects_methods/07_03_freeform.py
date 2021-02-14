@@ -22,7 +22,10 @@ class Dog:
     def __str__(self):
         return f"This dog is a {self.age} year old, {self.color} {self.type}!"
     def __add__(self, other):
-        return self.age + other.age
+        if self.type == other.type:
+            return self.type
+        else:
+            return f"{self.type}-{other.type} mix"
 
 class Dog_food:
     def __init__(self, type, flavor, price):
@@ -43,13 +46,15 @@ class Dog_toys:
 
 my_dog = Dog("rottweiler", "black", 4)
 your_dog = Dog("Vizsla", "brown", 3)
+new_dog = Dog("Vizsla", "purple", 8)
 dry_food = Dog_food("dry", "salmon", "cheap")
 wet_food = Dog_food("wet", "chicken", "expensive")
 my_dog_toy = Dog_toys("ball", "yellow", "small")
 your_dog_toy = Dog_toys("dinosaur", "red", "big")
 
 print(your_dog, my_dog)
-print(f"Total age of these dogs is {your_dog + my_dog} years")
+#print(f"Total age of these dogs is {your_dog + my_dog} years")
+print(f"These dogs combined is a {your_dog + new_dog}.")
 print(dry_food, wet_food)
 print(your_dog_toy, my_dog_toy)
 
