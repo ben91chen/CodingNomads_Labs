@@ -7,3 +7,24 @@ Write a script that reads in the words from the words.txt file and finds and pri
 
 
 '''
+import os
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+path = os.getcwd()
+print(path)
+
+with open('words.txt', 'r') as f:
+    read_data = f.read()
+    x = read_data.split()
+    print(len(x))
+    max_ = max(x, key=len)
+    min_ = min(x, key=len)
+    for i in x:
+        if len(i) == len(max_):
+            print(i)
+    for i in x:
+        if len(i) == len(min_):
+            print(i)
+
+
+
+
