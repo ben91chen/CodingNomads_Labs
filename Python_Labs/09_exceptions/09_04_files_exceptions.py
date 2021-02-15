@@ -23,3 +23,27 @@ BONUS CHALLENGE: write a custom Exception that inherits from Exception and raise
 first 100 characters of any of the files contain the string "Prince".
 
 '''
+import os
+# Open war_and_peace.txt, read the whole file content and store it in a variable
+with open('books/war_and_peace.txt', 'r') as f:
+    book_1 = f.read()
+# Open crime_and_punishment.txt and overwrite the whole content with an empty string
+try:
+    with open('books/crime_and_punishment.txt', 'w') as writer:
+        writer.write("")
+except TypeError:
+    print("One of your files does not have any characters.")
+
+path = "/Users/benchen/Documents/CodingNomads/labs/Python_Labs/09_exceptions/books"
+os.chdir(path)
+files = os.listdir(path)
+print(files)
+
+for file in files:
+    with open(file, 'r') as reader:
+        if "copy" in file:
+            break
+        else:
+            print(reader.read(1))
+
+

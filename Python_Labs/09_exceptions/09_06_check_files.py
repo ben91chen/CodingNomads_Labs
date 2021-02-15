@@ -7,4 +7,18 @@ only if neither of them applies.
 
 '''
 
-file_name = 'integers.txt'
+try:
+    with open('integers.txt') as f:
+        num = int(f.read(1))
+        calculation = num + 1
+except FileNotFoundError:
+    print("File doesn't exist")
+except ValueError:
+    print("Can only read in the 1st character")
+else:
+    print(calculation)
+
+
+
+
+

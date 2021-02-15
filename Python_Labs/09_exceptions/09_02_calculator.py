@@ -8,3 +8,13 @@ the script should handle:
 Test it and make sure it does not crash when you enter incorrect values.
 
 '''
+try:
+    dividend = int(input("Please enter the number to be divided: "))
+    divisor = int(input("Please enter the division: "))
+    result = dividend / divisor
+    print(f"The result of {dividend} divided by {divisor} is {result}")
+except ZeroDivisionError:
+    print("Number can't be divided by 0.")
+except ValueError:
+    print("That's not a number.")
+
