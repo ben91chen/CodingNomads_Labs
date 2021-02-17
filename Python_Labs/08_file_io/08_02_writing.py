@@ -10,7 +10,7 @@ cwd = os.getcwd()
 print(cwd)
 
 # first attempt
-"""reversed_list = []
+reversed_list = []
 with open('words.txt', 'r') as reader:
     read_data = reader.read()
     lines_split = read_data.split()
@@ -19,12 +19,17 @@ with open('words.txt', 'r') as reader:
         reversed_list.append(word)
 
 with open('words_reverse.txt', "w") as writer:
-    for word in reversed_list:
-        writer.write(word)"""
+    writer.write("\n".join(reversed_list))
 
-with open('words.txt') as rf, open('words_reverse.txt', 'w') as wf:
+
+
+    """for word in reversed_list:
+        print(word, end="\n")
+        writer.write(word + "\n")"""
+
+'''with open('words.txt') as rf, open('words_reverse.txt', 'w') as wf:
     for line in reversed(rf.readlines()):
-        wf.write(line)
+        wf.write(line)'''
 
 
 
