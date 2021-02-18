@@ -4,3 +4,8 @@ Adapt your Generator expression from the previous Exercise
 What numbers do you get?
 
 '''
+gen = (num for num in range(100000) if num % 1111 == 0)
+
+
+for number in gen:
+    print(number // 1111)
